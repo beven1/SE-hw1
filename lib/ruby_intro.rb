@@ -2,12 +2,24 @@
 
 # Part 1
 
-def sum arr
-  # YOUR CODE HERE
+def sum(arr)
+    if arr.any?
+        return arr.reduce(0, :+)
+    else
+        return 0
+    end
 end
 
-def max_2_sum arr
-  # YOUR CODE HERE
+def max_2_sum(arr)
+    if arr.count > 2
+        return arr.max(2).reduce(:+)
+    elsif arr.count == 1
+        return arr[0]
+    elsif arr.count == 2
+        return arr.reduce(0, :+)
+    else
+        return 0
+    end
 end
 
 def sum_to_n? arr, n
