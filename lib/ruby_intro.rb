@@ -22,8 +22,19 @@ def max_2_sum(arr)
     end
 end
 
-def sum_to_n? arr, n
-  # YOUR CODE HERE
+def sum_to_n?(arr, n)
+  if arr.count > 1
+    arr.each do |x| 
+      temp = n - x
+      if arr.include?(temp) == true && temp != x
+        return true
+      elsif arr.include?(temp) == false && x.equal?(arr.last) || x.equal?(arr.last)
+        return false
+      end
+    end
+  else
+    return false
+  end
 end
 
 # Part 2
